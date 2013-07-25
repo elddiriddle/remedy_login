@@ -1,4 +1,19 @@
-﻿# Open ie
+﻿<#
+	.Description
+		RemedyLogin2 is designed to automate the login to Remedy Web Interface for a given user
+	.Synopsis
+		See above
+	.Example
+		Coming soon
+	.Example
+		Coming soon
+	.Input
+		[string]
+	.Notes
+		Author: Rob Riddle (roberrid@cisco.com)
+#>
+
+# Open ie
 $url = "your url here"
 $username="your user name here"
 $password="your pass word here"
