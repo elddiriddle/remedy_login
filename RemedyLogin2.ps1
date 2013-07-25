@@ -14,9 +14,9 @@
 #>
 
 # Open ie
-$url = "your url here"
-$username="your user name here"
-$password="your pass word here"
+$url = Read-Host "Target URL here"
+$username = "Username"
+$password= Read-Host -AsSecureString "Password"
 
 
 #Login to remedy
