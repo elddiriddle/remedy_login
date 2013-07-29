@@ -1,4 +1,26 @@
-﻿[CmdletBinding()]
+﻿<#
+	.Description
+		Import-StoredCreds is designed to securely store and read a password for a user from a local file on the machine
+	.Synopsis
+		Import-StoredCreds is  designed to securely store and read a password for a user from a local file on the machine and was
+		written specifically with UCS and VMware environments in mind. It first checks the username of the user who launched the 
+		function. It then either pulls a password file previously created or prompts the user to enter a password to encrypt and store.
+		When using the password, it reads the file and converts the password from a 2048-bit hashed string to plain-text. 
+		Work is underway to change that conversion to SecureString.
+	.Example
+		Import-StoredCreds -username brebrigg
+		Calls the function passing the username "brebrigg" as the argument for parameter "username"
+	.Example
+		Import-StoredCreds brebrigg
+		Same as above. The -username is the only parameter and explicit specification is not necessary.
+	.Input
+		[string]
+	.Notes
+		Name: Import-StoredCreds
+		Author(s): Jade Lester (jadleste@cisco.com) and Bren Briggs (bbriggs@milestonepowered.com)
+#>
+
+[CmdletBinding()]
 Param(
   [Parameter(Mandatory=$True,Position=1)]
    [string]$UserName
